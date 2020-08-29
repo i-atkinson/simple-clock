@@ -1,0 +1,12 @@
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+<p id="timer"></p>
+
+	<script>
+		setInterval(function(){
+			$.get('/timer',function(time){
+				document.getElementById("timer").innerHTML=time.time;
+			});
+		},1000);
+	</script>
